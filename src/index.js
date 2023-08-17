@@ -8,9 +8,9 @@ let weekDays = [
   "Monday",
   "Tuesday",
   "Wednesday",
-  "Thursaday",
+  "Thursday",
   "Friday",
-  "Sataturday",
+  "Saturday",
 ];
 let currentDay = weekDays[today.getDay()];
 let hours = today.getHours();
