@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW Plus - week2</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/eaddde2066.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="scr/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card" style="width: 40rem">
+        <div class="m-4">
+          <form class="d-flex" role="search" id="citySearchForm">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Find a city"
+              aria-label="Search"
+              id="cityInput"
+            />
+            <button class="btn" type="submit" id="searchButton">Search</button>
+            <button class="btn" type="submit" id="currentLocationButton">
+              Current Location
+            </button>
+          </form>
+        </div>
+        <div class="m-3">
+          <div class="row">
+            <div class="col-sm-7 mb-2 mb-sm-0">
+              <div class="float-center">
+                <img
+                  src="images/sun-cloud.svg"
+                  class="card-img-top-title"
+                  alt="sun-cloud"
+                />
+              </div>
+            </div>
+
+            <div class="col-sm-5 mb-4 mb-sm-0">
+              <div class="card-body">
+                <div class="float-left">
+                  <h4 class="card-title" id="featuredCity">La Rochelle</h4>
+                  <h6 class="card-subtitle mb-2">Today (Sun.)</h6>
+                  <h1 class="card-title-degree">
+                    <span id="temperatureDisplayedTitle">25</span>
+                    <span class="temp-high-low" id="headingTemperature">
+                      <span id="tempCelcius"><a href="#">°C</a></span> |
+                      <span id="tempFahrenheit"><a href="#">°F</a></span></span
+                    >
+                  </h1>
+                  <p class="card-text-title-info">
+                    Humidity: <span id="currentHumidity">84 ></span>% <br />
+                    Wind:
+                    <span id="currentWind">16</span>km/h
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p>
+          <button
+            class="btn"
+            data-bs-toggle="collapse"
+            href="#multiCollapseExample1"
+            role="button"
+            aria-expanded="true"
+            aria-controls="multiCollapseExample1"
+          >
+            Mon.
+          </button>
+          <button
+            class="btn"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#multiCollapseExample2"
+            aria-expanded="true"
+            aria-controls="multiCollapseExample2"
+          >
+            Tues.
+          </button>
+          <button
+            class="btn"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#multiCollapseExample3"
+            aria-expanded="true"
+            aria-controls="multiCollapseExample3"
+          >
+            Wed.
+          </button>
+          <button
+            class="btn"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#multiCollapseExample4"
+            aria-expanded="true"
+            aria-controls="multiCollapseExample4"
+          >
+            Thur.
+          </button>
+          <button
+            class="btn"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#multiCollapseExample5"
+            aria-expanded="true"
+            aria-controls="multiCollapseExample5"
+          >
+            Fri.
+          </button>
+          <button
+            class="btn"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target=".multi-collapse"
+            aria-expanded="true"
+            aria-controls="multiCollapseExample1 multiCollapseExample2 multiCollapseExample3 multiCollapseExample4 multiCollapseExample5"
+          >
+            week
+          </button>
+        </p>
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-2">
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
+              <div class="card card-body">
+                <h5 class="card-title weekdays">Mon.</h5>
+                <img src="images/rain.svg" class="card-img-top" alt="..." />
+                <p class="card-text degrees">19/27°C</p>
+                <br />
+              </div>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="collapse multi-collapse" id="multiCollapseExample2">
+              <div class="card card-body">
+                <h5 class="card-title weekdays">Tues.</h5>
+                <img
+                  src="images/sun-cloud.svg"
+                  class="card-img-top"
+                  alt="clouded"
+                />
+                <p class="card-text degrees">18/26°C</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="collapse multi-collapse" id="multiCollapseExample3">
+              <div class="card card-body">
+                <h5 class="card-title weekdays">Wed.</h5>
+                <img
+                  src="images/sun-strong.svg"
+                  class="card-img-top"
+                  alt="Sun-rain"
+                />
+                <p class="card-text degrees">20/25°C</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="collapse multi-collapse" id="multiCollapseExample4">
+              <div class="card card-body">
+                <h5 class="card-title weekdays">Thur.</h5>
+                <img src="images/sun.svg" class="card-img-top" alt="sun" />
+                <p class="card-text degrees">18/23°C</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="collapse multi-collapse" id="multiCollapseExample5">
+              <div class="card card-body">
+                <h5 class="card-title weekdays">Fri.</h5>
+                <img
+                  src="images/thunder.svg"
+                  class="card-img-top"
+                  alt="clouded-sun"
+                />
+                <p class="card-text degrees">17/23°C</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-1"></div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scr/index.js"></script>
+  </body>
+</html>

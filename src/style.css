@@ -1,0 +1,90 @@
+h1 {
+  font-size: 40px;
+  font-weight: 900;
+  color: white;
+}
+h4 {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+h6 {
+  font-size: 18px;
+  font-weight: 600;
+}
+h5 {
+  font-size: small;
+  text-align: center;
+}
+
+p {
+  font-size: small;
+  text-align: center;
+  color: #f3d3c7;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#currentLocationButton {
+  margin: 0 10px 0 10px;
+  background-color: #ffffff;
+  color: #ec6d40;
+}
+.card-title {
+  margin-top: 10px;
+  font-weight: bolder;
+  color: #f3d3c7;
+}
+.card-subtitle {
+  color: #f3d3c7;
+}
+.card {
+  border-color: #ec6d40;
+  background-color: #ec6d40;
+}
+.card-body {
+  padding: 0;
+  margin-top: 60px;
+}
+.card-img-top-title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  max-width: 100%;
+  text-align: center;
+}
+.temp-high-low {
+  font-size: x-small;
+  color: white;
+  position: relative;
+  top: -22px;
+}
+.form-control {
+  border-color: #edbcaa;
+}
+
+.card-text-title-info {
+  text-align: left;
+  color: white;
+}
+.card-text {
+  margin-top: 10px;
+}
+.btn {
+  border-color: white;
+  color: white;
+}
+.btn:hover {
+  background-color: white;
+  color: #ec6d40;
+}
+.fullTemperature {
+  color: white;
+  text-align: center;
+  font-size: 170px;
+}
+.weekdays {
+  color: white;
+}
