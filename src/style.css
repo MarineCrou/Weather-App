@@ -21,7 +21,13 @@ p {
   text-align: center;
   color: #f3d3c7;
 }
-
+#open-source {
+  text-align: left;
+  color: #ec6d40;
+}
+#open-source:hover {
+  text-decoration: underline;
+}
 a {
   text-decoration: none;
   color: white;
@@ -88,9 +94,4 @@ a {
 }
 .weekdays {
   color: white;
-}
-.open-source {
-  text-align: left;
-  color: #ec6d40;
-  margin: 0 0 0 40px;
 }
